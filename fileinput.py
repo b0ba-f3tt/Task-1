@@ -5,7 +5,6 @@ results = []
 with open(file_path, "r") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        # Extract variables
         temperature = float(row["temperature"])
         humidity = float(row["humidity"])
         pressure = float(row["pressure"])
