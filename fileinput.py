@@ -21,11 +21,9 @@ with open(file_path, "r") as csvfile:
 temperature_values = [result["temperature"] for result in results]
 precipitation_values = [result["precipitation"] for result in results]
 plt.plot(temperature_values, precipitation_values, 'o', label='Weather Data')
-plt.xlabel('Temperature (°C)')
+plt.xlabel('Temperature')
 plt.ylabel('Precipitation')
 plt.title('Weather Data Analysis')
-plt.legend()
-plt.savefig('weather_plot.png')
 for result in results:
     print(f"Temperature: {result['temperature']}°C, Humidity: {result['humidity']}%, "
           f"Pressure: {result['pressure']}hPa, Precipitation: {result['precipitation']}")
