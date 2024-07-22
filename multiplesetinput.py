@@ -18,9 +18,8 @@ for key, value in weather_parameters.items():
 temperature_range = range(0, 31)
 precipitation_values = [temperature * time**2 + pressure * time + humidity for temperature in temperature_range]
 plt.figure(figsize=(8, 6))
-plt.plot(temperature_range, precipitation_values, marker='o', linestyle='-')
-plt.xlabel('Temperature (°C)')
-plt.ylabel('Precipitation (mm)')
-plt.title('Relationship between Temperature and Precipitation')
-plt.grid(True)
+plt.plot(temperature_range, precipitation_values, marker='', linestyle='-')
+plt.xlabel('Temperature')
+plt.ylabel('Precipitation')
+plt.title('Temperature and Precipitation')
 plt.show()
